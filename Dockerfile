@@ -21,8 +21,8 @@ ssh \
 vim \
 zlib1g-dev
 
-RUN mkdir -p /project/django_deployment
-WORKDIR /project/django_deployment
+RUN mkdir -p /project/askii_deployment
+WORKDIR /project/askii_deployment
 
 # Install ruby gems
 RUN echo "gem: --no-ri --no-rdoc" > ~/.gemrc

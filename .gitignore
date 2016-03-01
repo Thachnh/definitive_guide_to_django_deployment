@@ -29,3 +29,4 @@ fab_hosts
 settings.json
 .idea
 aws.cfgchef_files/data_bag_key
+chef_files/data_bag_key

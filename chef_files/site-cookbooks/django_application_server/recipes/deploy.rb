@@ -36,7 +36,8 @@ application "#{node.app_name}" do
 	path "/srv/#{node.app_name}"
 	owner "nobody"
 	group "nogroup"
-	repository "https://github.com/#{node.repo}.git"
+	repository "git@github.com:#{node.repo}.git"
+	deploy_key "#{settings['DEPLOY_KEY']}"
 	revision "master"
 	symlink_before_migrate "local_settings.py"=>"#{node.app_name}/settings/local_settings.py"
 	symlinks("local_settings.py"=>"#{node.app_name}/settings/local_settings.py")

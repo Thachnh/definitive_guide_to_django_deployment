@@ -111,7 +111,8 @@ application "#{node.app_name}" do
 	path "/srv/#{node.app_name}"
 	owner "nobody"
 	group "nogroup"
-	repository "https://github.com/#{node.repo}.git"
+	repository "git@github.com:#{node.repo}.git"
+	deploy_key "#{settings['DEPLOY_KEY']}"
 	revision "master"
 	migrate true
 
